@@ -35,8 +35,16 @@
           (for-each (☯ (go work))
                     (rest t))))))
 
+(define TOLERANCE 0.0001)
+
 (define (validate-attributions attributions)
-  (~> (attributions) hash-values △ + (= 100)))
+  (~> (attributions)
+      hash-values
+      △
+      +
+      (< (- 100 TOLERANCE)
+         _
+         (+ 100 TOLERANCE))))
 
 (define (validate-appraisal tree)
   ;; check that everything totals to 1
