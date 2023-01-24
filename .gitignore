@@ -1,4 +1,13 @@
 # vim noise
 *~
 *.sw?
+compiled
+doc
+docs
+coverage
 
+# docs output
+*.html
+*.css
+*.js
+MathJax
