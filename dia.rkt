@@ -59,4 +59,5 @@
     (let* ([ants (hash-ref antecedents k)]
            [n (length ants)])
       (for ([ka ants])
-        (hash-set! result ka (/ v n))))))
+        (let ([cur (hash-ref result ka 0)])
+          (hash-set! result ka (+ cur (/ v n))))))))
