@@ -6,6 +6,7 @@
          validate-appraisal
          incorporate-appraisal
          attribute-antecedents
+         reconcile-appraisals
          node-name
          node-weight)
 
@@ -69,3 +70,20 @@
       (for ([ka ants])
         (let ([cur (hash-ref result ka 0)])
           (hash-set! result ka (+ cur (/ v n))))))))
+
+(define (determine-coefficients n)
+  ;; using the 1-N-N² method, for labor = K, we get that
+  ;; K = n² / n² + n + 1
+  ;; and labor capital and ideas are K, K/n, K/n²
+  (let ([k (/ (sqr n) (+ (sqr n) n 1))])
+    (~> (k)
+        (-< _
+            (/ n)
+            (/ (sqr n)))
+        (>< ->inexact))))
+
+(define (reconcile-appraisals n labor capital antecedents result)
+  (let-values ([(L C A) (determine-coefficients n)])
+    (incorporate-appraisal labor L result)
+    (incorporate-appraisal capital C result)
+    (incorporate-appraisal antecedents A result)))
