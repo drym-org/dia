@@ -1,5 +1,14 @@
 # DIA Resources
 
+## Installation and Usage
+
+``` shell
+$ cd dia
+$ make install
+$ cd evaluation/attribution
+$ racket synthesized.rkt
+```
+
 ## Incorporating Adjustments
 
 When labor, capital or ideas inputs are modified to account for formerly left-out items, these "adjustments" could be incorporated by following these steps.
