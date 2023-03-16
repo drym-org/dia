@@ -1,10 +1,17 @@
 # DIA Resources
 
-## Installation and Usage
+## Installation
 
 ``` shell
 $ cd dia
 $ make install
+```
+
+## Usage
+
+In a project's DIA repo (e.g. [dia-symex](https://github.com/drym-org/dia-symex)), something like this will generate the attribution results:
+
+``` shell
 $ cd evaluation/attribution
 $ racket synthesized.rkt
 ```
