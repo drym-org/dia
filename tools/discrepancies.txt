@@ -1,0 +1,22 @@
+Scripts to process a set of appraisals and make it easier to identify large discrepancies, etc.
+
+From: https://github.com/benknoble/dia-qi/commit/8dd625c7b57533541f1a6e9416db627e9779b10d
+
+paste evaluation/appraisal/*/labor.md | grep -Eo '\[[[:digit:]]{1,3}%]' | grep -Eo '[[:digit:]]+' | paste - - - | nl | awk '
+function min(a,b) { return a == 0 ? (b == 0 ? 101 : b) : (a <= b ? a : (b == 0 ? 101 : b)); }
+function max(a,b) { return a >= b ? a : b; }
+function min3(a,b,c) { return min(min(a,b),c); }
+function max3(a,b,c) { return max(max(a,b),c); }
+min3($2,$3,$4) != 101 { print $1, min3($2,$3,$4), max3($2,$3,$4), max3($2,$3,$4)-min3($2,$3,$4); }
+' | awk '$4 >= 15' >| evaluation/appraisal/ben/discrepancies
+
+---
+
+For a histogram, change `awk '$4 >= 15' …` to
+
+awk '{ print $4; }' | sort | uniq -c | sort -g | awk '{ print $2, $1; }' | sort -g | awk '{
+    printf "%s\t", $1
+    for(i = 0; i < int($2); i++)
+        printf "*"
+    printf "\n"
+}'
