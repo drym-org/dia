@@ -21,6 +21,9 @@ $ cd evaluation/attribution
 $ racket synthesized.rkt
 ```
 
+Module languages to parse appraisal and antecedents trees are available via
+`#lang abe/attribution` and `#lang abe/antecedents`.
+
 ## Incorporating Adjustments
 
 When labor, capital or ideas inputs are modified to account for formerly left-out items, these "adjustments" could be incorporated by following these steps.
