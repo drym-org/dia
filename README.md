@@ -6,6 +6,11 @@
 $ cd dia
 $ make install
 ```
+or
+```shell
+$ raco pkg install 'https://github.com/drym-org/dia?path=dia#main'
+```
+(use `--clone dia` to install the package via a clone)
 
 ## Usage
 
