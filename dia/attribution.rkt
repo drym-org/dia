@@ -26,27 +26,21 @@ and another sequence of non-space characters is considered an attributive "pair"
 and is attributed as a single unit, to account for teamwork. Groups of sizes
 larger than 2 are not yet supported.
 
-Future work: try swapping define-runtime-path for syntax/path-spec's
-resolve-path-spec.
-
 |#
 
-(require racket/runtime-path
-         syntax/parse/define
+(require syntax/parse/define
+         (for-syntax syntax/path-spec
+                     racket/path)
          abe/dia
          abe/tree-parser)
 
 (define-syntax-parse-rule
   (mb path:string {~datum =>} export:id)
-  ;; Make sure runtime-path resolved like a require: from context of written
-  ;; module, not this module. Also, we have to wrap path in #%datum manually or
-  ;; suffer a "#%datum not bound in the transformer environment" error.
-  #:with runtime-path-define
-  (datum->syntax #'path (syntax-e #'(define-runtime-path input (#%datum . path))) #'path)
+  #:with input (some-system-path->string (resolve-path-spec #'path #'path #'path))
   (#%module-begin
    (provide export)
-   runtime-path-define
-   (define tree (read-attribution-tree input))
+   ;; unless path-strings quoted, #%datum unbound error (not sure why not automatically introduced)
+   (define tree (read-attribution-tree 'input))
    (unless (validate-appraisal tree)
      (error 'validate-appraisal "bad appraisal: ~a" tree))
    (define export (make-hash))

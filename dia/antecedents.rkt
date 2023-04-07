@@ -22,31 +22,23 @@ comma-separated antecedents in place of percentages.
 Technically, the shape of the antecedents tree doesn't matter, as long as the
 leaves have antecedents. But this has only been tested on antecedents trees.
 
-Future work: try swapping define-runtime-path for syntax/path-spec's
-resolve-path-spec.
-
 |#
 
-(require racket/runtime-path
-         syntax/parse/define
+(require syntax/parse/define
+         (for-syntax syntax/path-spec
+                     racket/path)
          abe/dia
          abe/tree-parser)
 
 (define-syntax-parse-rule
   (mb [ideas:string antecedents:string] {~datum =>} export:id)
-  ;; Make sure runtime-path resolved like a require: from context of written
-  ;; module, not this module. Also, we have to wrap path in #%datum manually or
-  ;; suffer a "#%datum not bound in the transformer environment" error.
-  #:with runtime-path-define-ideas
-  (datum->syntax #'ideas (syntax-e #'(define-runtime-path ideas-p (#%datum . ideas))) #'ideas)
-  #:with runtime-path-define-antecdents
-  (datum->syntax #'antecedents (syntax-e #'(define-runtime-path antecdents-p (#%datum . antecedents))) #'antecedents)
+  #:with ideas-p (some-system-path->string (resolve-path-spec #'ideas #'ideas #'[ideas antecedents]))
+  #:with antecedents-p (some-system-path->string (resolve-path-spec #'antecedents #'antecedents #'[ideas antecedents]))
   (#%module-begin
    (provide export)
-   runtime-path-define-ideas
-   runtime-path-define-antecdents
-   (define tree (read-idea-attribution-tree ideas-p))
-   (define antes (read-idea-antecedents-tree antecdents-p))
+   ;; unless path-strings quoted, #%datum unbound error (not sure why not automatically introduced)
+   (define tree (read-idea-attribution-tree 'ideas-p))
+   (define antes (read-idea-antecedents-tree 'antecedents-p))
    (unless (validate-appraisal tree)
      (error 'validate-appraisal "bad appraisal: ~a" tree))
    (define export (make-hash))
