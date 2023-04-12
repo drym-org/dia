@@ -6,6 +6,11 @@
 $ cd dia
 $ make install
 ```
+or
+```shell
+$ raco pkg install 'https://github.com/drym-org/dia?path=dia#main'
+```
+(use `--clone dia` to install the package via a clone)
 
 ## Usage
 
@@ -15,6 +20,9 @@ In a project's DIA repo (e.g. [dia-symex](https://github.com/drym-org/dia-symex)
 $ cd evaluation/attribution
 $ racket synthesized.rkt
 ```
+
+Module languages to parse appraisal and antecedents trees are available via
+`#lang abe/attribution` and `#lang abe/antecedents`.
 
 ## Incorporating Adjustments
 
