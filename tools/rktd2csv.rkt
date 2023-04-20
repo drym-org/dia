@@ -13,7 +13,9 @@
       ;; a list of lists
       (map (☯ (~> (-< (~> car ->string) cdr)
                   list))
-           (eval (read port) (make-base-namespace))))))
+           ;; the value is read as `(quote ...)` as we use `pretty-print`,
+           ;; so extract the quoted list here via `cadr`
+           (cadr (read port))))))
 
 (define (write-csv data [headers #f])
   (let ([data (if headers
