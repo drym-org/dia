@@ -15,7 +15,7 @@ remove:
 	raco pkg remove $(PACKAGE-NAME)
 
 build:
-	scribble --html --dest output --dest-name index.html docs/DIA.scrbl
+	scribble --html --dest output --dest-name index.html DIA.scrbl
 
 view: build
 	open output/index.html

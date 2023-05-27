@@ -27,12 +27,12 @@ jobs:
           variant: 'CS'
           version: 'stable'
       - name: Install Documentation and its Dependencies
-        run: make install
+        run: cd dia-docs && make install
       - name: Build docs for hosting
-        run: make build
+        run: cd dia-docs && make build
       - name: Push to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
-          folder: output
+          folder: dia-docs/output
           branch: gh-pages
           clean: true
