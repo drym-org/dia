@@ -3,7 +3,6 @@
 *.sw?
 compiled
 doc
-docs
 coverage
 
 # docs output
