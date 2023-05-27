@@ -1,3 +1,5 @@
+[![Docs](https://img.shields.io/badge/docs-dia-blue)](https://drym-org.github.io/dia/)
+
 # DIA Resources
 
 ## Installation
