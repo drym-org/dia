@@ -40,7 +40,7 @@ larger than 2 are not yet supported.
   (#%module-begin
    (provide export)
    ;; unless path-strings quoted, #%datum unbound error (not sure why not automatically introduced)
-   (define tree (read-attribution-tree 'input))
+   (define tree (call-with-input-file 'input read-attribution-tree))
    (unless (validate-appraisal tree)
      (error 'validate-appraisal "bad appraisal: ~a" tree))
    (define export (make-hash))

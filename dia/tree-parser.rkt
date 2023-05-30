@@ -19,18 +19,18 @@ corresponding kind of tree.
 
 ;; If this is not defined with function syntax, inner implementation functions
 ;; unbound because they are eagerly evaluated.
-(define-flow (read-attribution-tree f)
-  (~> file->lines
+(define-flow (read-attribution-tree ip)
+  (~> port->lines
       (make-indent-based-tree (flow (regexp-replace* #px"[[:blank:]]" _ " ")))
       (tree-map label->attribution leaf->attribution)))
 
-(define-flow (read-idea-attribution-tree f)
-  (~> file->lines
+(define-flow (read-idea-attribution-tree ip)
+  (~> port->lines
       (make-indent-based-tree (flow (regexp-replace* #px"[[:blank:]]" _ " ")))
       (tree-map label->attribution label->attribution)))
 
-(define-flow (read-idea-antecedents-tree f)
-  (~> file->lines
+(define-flow (read-idea-antecedents-tree ip)
+  (~> port->lines
       (make-indent-based-tree (flow (regexp-replace* #px"[[:blank:]]" _ " ")))
       (tree-map values leaf->antecedents)
       (leaves->hash car cdr)))
