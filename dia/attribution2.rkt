@@ -7,7 +7,7 @@
 Format:
   #lang abe/attribution2 exported-attributions-id
 
-  - Appraisal tree [N%]
+  - [contributors] Appraisal tree [N%]
   ...
 
 Meaning:
@@ -19,14 +19,9 @@ with bracketed percentags [N%] at the end of the line.
 - Validate attributions.
 - Export (provide) the exported-attributions-id bound to the attributions.
 
-To identify attributions, the first sequence of non-space characters after a
-bullet is used. For capital, this means that descriptive bullets without a
-project name should be given a faux project name.
-
-Additionally, a sequence of non-space characters followed by the text " and "
-and another sequence of non-space characters is considered an attributive "pair"
-and is attributed as a single unit, to account for teamwork. Groups of sizes
-larger than 2 are not yet supported.
+To identify attributions, contributors are listed, comma-separated, in
+[square-brackets] at the beginning of a bullet. This holds for labor, too, to
+name the project but permit additional description.
 
 |#
 
@@ -61,7 +56,7 @@ larger than 2 are not yet supported.
               (format "expected identifier\n  read: ~s" name)
               (current-continuation-marks)
               (list (srcloc src (syntax-line name) (syntax-column name) (syntax-position name) (syntax-span name))))))
-    (define tree (read-attribution-tree in))
+    (define tree (read-attribution-tree2 in))
     (strip-context #`(#,name <= #,tree)))
   (define (reader in)
     (syntax->datum (syntax-reader #f in))))
