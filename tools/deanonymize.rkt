@@ -3,11 +3,11 @@
 
 #| Overview
 
-Assumes a very specific project structure. See adjance Makefile example for
+Assumes a very specific project structure. See adjacent Makefile example for
 details on "input" files and "output" files. Also assumes its placement in the
 project (next to the output files).
 
-*nix specifix: you'll need implementations of POSIX paste(1), column(1), and
+*nix specifics: you'll need implementations of POSIX paste(1), column(1), and
 POSIX sed(1). The column(1) implementation should support `-t` and `-s`.
 
 1. Build lookup tables from the anonymized and named files. Uses paste(1) to

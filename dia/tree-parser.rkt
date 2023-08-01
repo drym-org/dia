@@ -1,6 +1,7 @@
 #lang racket
 
 (provide read-attribution-tree
+         read-attribution-tree2
          read-idea-attribution-tree
          read-idea-antecedents-tree)
 
@@ -19,18 +20,27 @@ corresponding kind of tree.
 
 ;; If this is not defined with function syntax, inner implementation functions
 ;; unbound because they are eagerly evaluated.
-(define-flow (read-attribution-tree f)
-  (~> file->lines
+(define-flow (read-attribution-tree ip)
+  (~> port->lines
+      (filter non-empty-string? _)
       (make-indent-based-tree (flow (regexp-replace* #px"[[:blank:]]" _ " ")))
       (tree-map label->attribution leaf->attribution)))
 
-(define-flow (read-idea-attribution-tree f)
-  (~> file->lines
+(define-flow (read-attribution-tree2 ip)
+  (~> port->lines
+      (filter non-empty-string? _)
+      (make-indent-based-tree (flow (regexp-replace* #px"[[:blank:]]" _ " ")))
+      (tree-map label->attribution leaf->attribution2)))
+
+(define-flow (read-idea-attribution-tree ip)
+  (~> port->lines
+      (filter non-empty-string? _)
       (make-indent-based-tree (flow (regexp-replace* #px"[[:blank:]]" _ " ")))
       (tree-map label->attribution label->attribution)))
 
-(define-flow (read-idea-antecedents-tree f)
-  (~> file->lines
+(define-flow (read-idea-antecedents-tree ip)
+  (~> port->lines
+      (filter non-empty-string? _)
       (make-indent-based-tree (flow (regexp-replace* #px"[[:blank:]]" _ " ")))
       (tree-map values leaf->antecedents)
       (leaves->hash car cdr)))
@@ -111,6 +121,19 @@ on format.
     [(regexp #px"^\\s*\\* ([^ ]+)(?:\\s+and\\s+([^ ]+))?.*\\[([[:digit:].]+)%\\]"
              (list _ name1 name2 (app string->number attribution)))
      (cons (if name2 (list name1 name2) name1)
+           attribution)]))
+
+(define (leaf->attribution2 x)
+  (match x
+    ;; uniform contribution syntax (https://github.com/drym-org/dia/issues/5):
+    ;;     * [comma-separated contributors] contribution [allocation%]
+    ;; Arbitrary spaces are permitted between start of line and start of
+    ;; bulleted item.
+    [(regexp #px"^\\s*\\* \\[([^]]+)\\].*\\[([[:digit:].]+)%\\]"
+             (list _ contributors (app string->number attribution)))
+     (cons (~> (contributors)
+               (string-split ", ")
+               (if (~> cdr null?) car _))
            attribution)]))
 
 (define (label->attribution x)

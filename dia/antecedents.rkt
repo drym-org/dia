@@ -37,8 +37,8 @@ leaves have antecedents. But this has only been tested on antecedents trees.
   (#%module-begin
    (provide export)
    ;; unless path-strings quoted, #%datum unbound error (not sure why not automatically introduced)
-   (define tree (read-idea-attribution-tree 'ideas-p))
-   (define antes (read-idea-antecedents-tree 'antecedents-p))
+   (define tree (call-with-input-file 'ideas-p read-idea-attribution-tree))
+   (define antes (call-with-input-file 'antecedents-p read-idea-antecedents-tree))
    (unless (validate-appraisal tree)
      (error 'validate-appraisal "bad appraisal: ~a" tree))
    (define export (make-hash))
