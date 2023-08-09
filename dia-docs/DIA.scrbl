@@ -69,7 +69,7 @@
 @itemlist[
 #:style 'ordered
 
-@item{On your own, starting at the highest level node, appraise the proportion of value contributed by each labor component (the total on all of the edges leading into a component must equal 100%).}
+@item{On your own, starting at the highest level node, appraise the proportion of value contributed by each labor component (the total of all of the components must equal 100%).}
 
 @item{Repeat (1) for the capital analysis.}
 
