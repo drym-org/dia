@@ -43,11 +43,11 @@
 @itemlist[
 #:style 'ordered
 
-@item{As a group, discuss to reconcile the different analyses to agree on one labor tree that decomposes the project in a way that accounts for all of the different labor analyses.}
+@item{As a group, discuss to reconcile the different labor analyses to agree on one labor tree that decomposes the project's labor contributions in a way that accounts for all of the independent analyses.}
 
-@item{Repeat step 1 for the capital tree.}
+@item{Repeat step 1 for the capital analysis.}
 
-@item{Repeat step 1 for the ideas tree.}
+@item{Repeat step 1 for the ideas analysis.}
 
 ]
 
@@ -69,11 +69,11 @@
 @itemlist[
 #:style 'ordered
 
-@item{On your own, starting at the highest level node, appraise the proportion of value contributed by each labor component. How important is each component compared to the others? The total of all of the components at each level must equal 100%.}
+@item{On your own, starting at the highest level node in the labor analysis, appraise the proportion of value contributed by each labor component. How important is each component compared to the others? The total of all of the components at each level must equal 100%.}
 
 @item{Repeat (1) for the capital analysis.}
 
-@item{Repeat (1) for the project's ideas tree.}
+@item{Repeat (1) for the ideas analysis.}
 
 @item{Share your appraisals with the group.}
 
@@ -84,11 +84,11 @@
 @itemlist[
 #:style 'ordered
 
-@item{Discuss to reconcile the different labor appraisals to agree on one appraisal that apportions value in the project in a way that accounts for all of the different appraisals.}
+@item{Discuss to reconcile the different labor appraisals to agree on one appraisal that apportions value in the project in a way that accounts for all of the independent appraisals.}
 
-@item{Repeat (1) for the project's capital tree.}
+@item{Repeat (1) for the project's capital appraisal.}
 
-@item{Repeat (1) for the project's ideas tree, distributing each idea leaf's value evenly over its antecedents.}
+@item{Repeat (1) for the project's ideas appraisal, distributing the value of each "leaf" idea in the tree evenly over its antecedents.}
 
 ]
 
