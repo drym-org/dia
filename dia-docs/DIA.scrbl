@@ -69,7 +69,7 @@
 @itemlist[
 #:style 'ordered
 
-@item{On your own, starting at the highest level node in the labor analysis, appraise the proportion of value contributed by each labor component. How important is each component compared to the others? The total of all of the components at each level must equal 100%.}
+@item{On your own, starting at the highest node in the labor analysis, appraise the proportion of value contributed by each labor component, progressively working your way into deeper levels of the tree. How important is each component compared to the others? The total of all of the components at each level must equal 100%.}
 
 @item{Repeat (1) for the capital analysis.}
 
