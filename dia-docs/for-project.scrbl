@@ -4,7 +4,7 @@
 
 @table-of-contents[]
 
-@section{List contributions}
+@section{List all contributions}
 
 @itemlist[
 #:style 'ordered

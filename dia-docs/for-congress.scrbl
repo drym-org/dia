@@ -6,7 +6,9 @@
 
 @section{Attribution}
 
-@subsection[#:style 'unnumbered]{1 Analyze}
+@subsection{Analyze}
+
+@subsubsection[#:tag "analyze:consider"]{Consider}
 
 @itemlist[
 #:style 'ordered
@@ -21,7 +23,7 @@
 
 ]
 
-@subsection[#:style 'unnumbered]{2 Agree on Analysis}
+@subsubsection[#:tag "analyze:agree"]{Agree}
 
 @itemlist[
 #:style 'ordered
@@ -34,20 +36,9 @@
 
 ]
 
-@subsection[#:style 'unnumbered]{3 Identify Antecedents}
+@subsection{Appraise}
 
-@itemlist[
-#:style 'ordered
-
-@item{As a group, annotate each @emph{leaf} idea in the agreed-upon ideas tree with any projects that you can think of, that is, projects exhibiting that idea or a similar idea. These projects need not have any other relationship to the present project besides common ideas, and these should be recorded with no consideration to temporality (i.e. whether the project came before or after the present one). Projects may appear on any number of leaf ideas.}
-
-@item{Identify projects in the annotated ideas tree that were announced within a year (on either side) of the present project, and write those down as a list of identified "cognates," retaining them on the annotated ideas tree. These will be treated in the same way as true antecedents.}
-
-@item{Identify projects in the annotated ideas tree that were announced more than a year after the present project, and write those down as a list of identified "subsequents," removing them from the annotated ideas tree.}
-
-]
-
-@subsection[#:style 'unnumbered]{4 Appraise}
+@subsubsection[#:tag "appraise:consider"]{Consider}
 
 @itemlist[
 #:style 'ordered
@@ -62,7 +53,7 @@
 
 ]
 
-@subsection[#:style 'unnumbered]{5 Agree on Appraisals}
+@subsubsection[#:tag "appraise:agree"]{Agree}
 
 @itemlist[
 #:style 'ordered
@@ -75,11 +66,59 @@
 
 ]
 
-@subsection[#:style 'unnumbered]{6 Reconcile the Appraisals}
+@subsection{Antecedents}
+
+@subsubsection[#:tag "antecedents:consider"]{Consider}
+
+@itemlist[
+#:style 'ordered
+
+@item{On your own, annotate each @emph{leaf} idea in the agreed-upon ideas tree with any projects that you can think of, that is, projects exhibiting that idea or a similar idea. These projects need not have any other relationship to the present project besides common ideas, and these should be recorded with no consideration to temporality (i.e. whether the project came before or after the present one). Projects may appear on any number of leaf ideas.}
+
+@item{Identify projects in the annotated ideas tree that were announced within a year (on either side) of the present project, and write those down as a list of identified "cognates," retaining them on the annotated ideas tree. These will be treated in the same way as true antecedents.}
+
+@item{Identify projects in the annotated ideas tree that were announced more than a year after the present project, and write those down as a list of identified "subsequents," removing them from the annotated ideas tree.}
+]
+
+@subsubsection[#:tag "antecedents:agree"]{Agree}
+
+@itemlist[
+#:style 'ordered
+
+@item{As a group, reconcile all reported antecedents in the ideas tree, and finalize the list of cognates and subsequents.}
+
+]
+
+@section{Pricing and Valuation}
+
+@subsection[#:tag "evaluate:consider"]{Consider}
+
+@itemlist[
+#:style 'ordered
+
+@item{On your own, review the cost analysis and proxy analysis provided by the project.}
+
+@item{Come up with a fair market price for use of the project.}
+
+@item{Come up with a valuation of everything created so far in the project.}
+
+]
+
+@subsection[#:tag "evaluate:agree"]{Agree}
+
+@itemlist[
+#:style 'ordered
+
+@item{Discuss and agree on price and valuation.}
+]
+
+@section{Results}
+
+@subsection{Reconcile the Appraisals}
 
 Discuss to assign weights to each appraisal tree. Consider using the 1-N-N² rule -- that is, if labor is worth K, then capital is worth 1/N × K, and ideas are worth 1/N² × K, for some "scaling factor" N that you agree on. The rationale is that we want labor, capital and ideas to be equally valuable when aggregated over all projects. Since labor is the least portable while ideas are the most portable, this rule models the fluidity of these categories as, roughly, "for every project you directly work on, N projects will use your work, and N² projects will be inspired by it." Note, nevertheless, that the ideas analysis described elsewhere in this document is not in terms of "inspiration" (implying causation) but only similarity.
 
-@subsection[#:style 'unnumbered]{7 Deanonymize and Tally}
+@subsection{Deanonymize and Tally}
 
 @itemlist[
 #:style 'ordered
@@ -89,20 +128,4 @@ Discuss to assign weights to each appraisal tree. Consider using the 1-N-N² rul
 @item{Repeat (1) for capital.}
 
 @item{Sum up the proportions by leaf nodes across all appraisal trees, weighted by the scaling factor for each tree (i.e. in the manner decided upon in "reconcile the appraisals"), to arrive at the final attributive proportions that total to 100%. Deliver this as an abe/ATTRIBUTIONS.txt file in the project repository.}
-
-@item{Deliver the list of cognates and subsequents as abe/cognates.txt and abe/subsequents.txt, respectively, to be committed to the project repository.}
-
-]
-
-@section{Pricing and Valuation}
-
-@itemlist[
-#:style 'ordered
-
-@item{Review the cost analysis and proxy analysis provided by the project.}
-
-@item{Come up with a fair market price for use of the project.}
-
-@item{Come up with a valuation of everything created so far in the project.}
-
 ]
