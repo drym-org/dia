@@ -73,11 +73,7 @@
 @itemlist[
 #:style 'ordered
 
-@item{On your own, annotate each @emph{leaf} idea in the agreed-upon ideas tree with any projects that you can think of, that is, projects exhibiting that idea or a similar idea. These projects need not have any other relationship to the present project besides common ideas, and these should be recorded with no consideration to temporality (i.e. whether the project came before or after the present one). Projects may appear on any number of leaf ideas.}
-
-@item{Identify projects in the annotated ideas tree that were announced within a year (on either side) of the present project, and write those down as a list of identified "cognates," retaining them on the annotated ideas tree. These will be treated in the same way as true antecedents.}
-
-@item{Identify projects in the annotated ideas tree that were announced more than a year after the present project, and write those down as a list of identified "subsequents," removing them from the annotated ideas tree.}
+@item{On your own, annotate each @emph{leaf} idea in the agreed-upon ideas tree with any projects that you can think of that exhibit the idea or a similar idea. "Projects" here could be software projects, academic papers, videos, art, songs, or anything else that could be considered as a single creation. These projects need not have any other relationship to the present project besides common ideas, and these should be recorded with no consideration to temporality (i.e. whether the project came before or after the present one). Projects may appear on any number of leaf ideas.}
 ]
 
 @subsubsection[#:tag "antecedents:agree"]{Agree}
@@ -85,7 +81,13 @@
 @itemlist[
 #:style 'ordered
 
-@item{As a group, reconcile all reported antecedents in the ideas tree, and finalize the list of cognates and subsequents.}
+@item{As a group, reconcile all reported antecedents in the ideas tree.}
+
+@item{For each reported antecedent, find out when it was published (i.e. released publicly). Create a new list of these projects together with their publication date, e.g. "The Merchant of Venice, 1596".}
+
+@item{In this list, for projects that were announced within a year (on either side) of the present project, they are considered "cognates," so write down the word "cognate" next to them, e.g. "The Merchant of Venice, 1596, cognate". These will be treated in the same way as true antecedents, so they can remain on the annotated ideas tree.}
+
+@item{In the same list, for projects that were announced more than a year after the present project, write down "subsequent" (instead of "cognate" -- e.g. "The Merchant of Venice, 1596, subsequent"), and remove them from the annotated ideas tree.}
 
 ]
 
