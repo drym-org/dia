@@ -70,11 +70,7 @@
 
 @subsubsection[#:tag "antecedents:consider"]{Consider}
 
-@itemlist[
-#:style 'ordered
-
-@item{On your own, annotate each @emph{leaf} idea in the agreed-upon ideas tree with any projects that you can think of that exhibit the idea or a similar idea. "Projects" here could be software projects, academic papers, videos, art, songs, or anything else that could be considered as a single creation. These projects need not have any other relationship to the present project besides common ideas, and these should be recorded with no consideration to temporality (i.e. whether the project came before or after the present one). Projects may appear on any number of leaf ideas.}
-]
+On your own, annotate each @emph{leaf} idea in the agreed-upon ideas tree with any projects that you can think of that exhibit the idea or a similar idea. "Projects" here could be software projects, academic papers, videos, art, songs, or anything else that could be considered as a single creation. These projects need not have any other relationship to the present project besides common ideas, and these should be recorded with no consideration to temporality (i.e. whether the project came before or after the present one). Projects may appear on any number of leaf ideas.
 
 @subsubsection[#:tag "antecedents:agree"]{Agree}
 
@@ -108,11 +104,7 @@
 
 @subsection[#:tag "evaluate:agree"]{Agree}
 
-@itemlist[
-#:style 'ordered
-
-@item{Discuss and agree on price and valuation.}
-]
+Discuss and agree on price and valuation.
 
 @section{Results}
 
