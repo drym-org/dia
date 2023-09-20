@@ -2,7 +2,9 @@
 
 @title{DIA Process}
 
-@section{For core contributors}
+@section{For project contributors}
+
+@subsection{List contributions}
 
 @itemlist[
 #:style 'ordered
@@ -18,7 +20,16 @@
 @item{Repeat steps 1-4 for all @emph{capital} contributions (e.g. source code, libraries and APIs used) and their sources. The descriptions should be minimally self-contained, as before. Commit this list as abe/capital.md and abe/capital-anonymized.md.}
 
 @item{Repeat steps 1-4 for all @emph{ideas} exhibited by the project. The descriptions should be minimally self-contained, as before. As you will likely think of these ideas in a "top down" fashion, i.e. high level ideas followed by more specific ideas, it would be most helpful to write down this tree representation of these ideas as you see them reflected in your project. Commit this as abe/ideas.md.}
+]
 
+@subsection{Cost analysis and proxy analysis}
+
+@itemlist[
+#:style 'ordered
+
+@item{Come up with an estimate of all costs incurred in creating the project. This could include estimates for the cost of labor using suitable hourly wages and number of person hours. Commit this "cost analysis" as abe/cost-analysis.md}
+
+@item{Identify other projects that are similar or analogous to the project and gather information about their pricing and valuation. Commit this "proxy analysis" as abe/proxy-analysis.md}
 ]
 
 @section{For congress participants}
