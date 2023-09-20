@@ -23,7 +23,9 @@
 
 @section{For congress participants}
 
-@subsection[#:style 'unnumbered]{1 Analyze}
+@subsection{Attribution}
+
+@subsubsection[#:style 'unnumbered]{1 Analyze}
 
 @itemlist[
 #:style 'ordered
@@ -38,7 +40,7 @@
 
 ]
 
-@subsection[#:style 'unnumbered]{2 Agree on Analysis}
+@subsubsection[#:style 'unnumbered]{2 Agree on Analysis}
 
 @itemlist[
 #:style 'ordered
@@ -51,7 +53,7 @@
 
 ]
 
-@subsection[#:style 'unnumbered]{3 Identify Antecedents}
+@subsubsection[#:style 'unnumbered]{3 Identify Antecedents}
 
 @itemlist[
 #:style 'ordered
@@ -64,7 +66,7 @@
 
 ]
 
-@subsection[#:style 'unnumbered]{4 Appraise}
+@subsubsection[#:style 'unnumbered]{4 Appraise}
 
 @itemlist[
 #:style 'ordered
@@ -79,7 +81,7 @@
 
 ]
 
-@subsection[#:style 'unnumbered]{5 Agree on Appraisals}
+@subsubsection[#:style 'unnumbered]{5 Agree on Appraisals}
 
 @itemlist[
 #:style 'ordered
@@ -92,11 +94,11 @@
 
 ]
 
-@subsection[#:style 'unnumbered]{6 Reconcile the Appraisals}
+@subsubsection[#:style 'unnumbered]{6 Reconcile the Appraisals}
 
 Discuss to assign weights to each appraisal tree. Consider using the 1-N-N² rule -- that is, if labor is worth K, then capital is worth 1/N × K, and ideas are worth 1/N² × K, for some "scaling factor" N that you agree on. The rationale is that we want labor, capital and ideas to be equally valuable when aggregated over all projects. Since labor is the least portable while ideas are the most portable, this rule models the fluidity of these categories as, roughly, "for every project you directly work on, N projects will use your work, and N² projects will be inspired by it." Note, nevertheless, that the ideas analysis described elsewhere in this document is not in terms of "inspiration" (implying causation) but only similarity.
 
-@subsection[#:style 'unnumbered]{7 Deanonymize and Tally}
+@subsubsection[#:style 'unnumbered]{7 Deanonymize and Tally}
 
 @itemlist[
 #:style 'ordered
@@ -108,5 +110,18 @@ Discuss to assign weights to each appraisal tree. Consider using the 1-N-N² rul
 @item{Sum up the proportions by leaf nodes across all appraisal trees, weighted by the scaling factor for each tree (i.e. in the manner decided upon in "reconcile the appraisals"), to arrive at the final attributive proportions that total to 100%. Deliver this as an abe/ATTRIBUTIONS.txt file in the project repository.}
 
 @item{Deliver the list of cognates and subsequents as abe/cognates.txt and abe/subsequents.txt, respectively, to be committed to the project repository.}
+
+]
+
+@subsection{Pricing and Valuation}
+
+@itemlist[
+#:style 'ordered
+
+@item{Review the cost analysis and proxy analysis provided by the project.}
+
+@item{Come up with a fair market price for use of the project.}
+
+@item{Come up with a valuation of everything created so far in the project.}
 
 ]
