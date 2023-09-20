@@ -13,7 +13,7 @@
 @itemlist[
 #:style 'ordered
 
-@item{On your own, analyze the project's anonymized labor contributions and organize them into a tree that you feel is representative, where the leaf nodes are the actual elements of the original list, and higher-level nodes represent groupings of the lower-level nodes.}
+@item{On your own, analyze the project's anonymized labor contributions and organize them into a tree that you feel is representative, where the "leaf" nodes are the actual elements of the original list, and higher-level nodes represent groupings of the lower-level nodes.}
 
 @item{Repeat for the project's anonymized capital contributions.}
 
