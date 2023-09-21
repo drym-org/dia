@@ -94,7 +94,7 @@ On your own, annotate each @emph{leaf} idea in the agreed-upon ideas tree with a
 @itemlist[
 #:style 'ordered
 
-@item{On your own, review the cost analysis and proxy analysis provided by the project.}
+@item{On your own, review the cost analysis, proxy analysis and usage analysis provided by the project.}
 
 @item{Come up with a fair market price for use of the project.}
 
