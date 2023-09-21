@@ -98,7 +98,9 @@ On your own, annotate each @emph{leaf} idea in the agreed-upon ideas tree with a
 
 @item{Come up with a fair market price for use of the project.}
 
-@item{Come up with a valuation of everything created so far in the project.}
+@item{Come up with a current valuation of everything created so far in the project.}
+
+@item{Come up with a projected total valuation of the project in the distant future.}
 
 ]
 
