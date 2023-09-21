@@ -22,12 +22,14 @@
 @item{Repeat steps 1-4 for all @emph{ideas} exhibited by the project. The descriptions should be minimally self-contained, as before. As you will likely think of these ideas in a "top down" fashion, i.e. high level ideas followed by more specific ideas, it would be most helpful to write down this tree representation of these ideas as you see them reflected in your project.}
 ]
 
-@section{Cost analysis and proxy analysis}
+@section{Cost analysis}
 
-@itemlist[
-#:style 'ordered
+Come up with an estimate of all costs incurred in creating the project. This could include estimates for the cost of labor using suitable hourly wages and number of person hours. Commit this "cost analysis" into the input folder of the project's DIA repository.
 
-@item{Come up with an estimate of all costs incurred in creating the project. This could include estimates for the cost of labor using suitable hourly wages and number of person hours. Commit this "cost analysis" into the input folder of the project's DIA repository.}
+@section{Proxy analysis}
 
-@item{Identify other projects that are similar or analogous to the project and gather information about their pricing and valuation. Commit this "proxy analysis" into the input folder of the project's DIA repository.}
-]
+Identify other projects that are similar or analogous to the project and gather information about their pricing and valuation. Commit this "proxy analysis" into the input folder of the project's DIA repository.
+
+@section{Usage analysis}
+
+Come up with an estimate of the current number of users of the project and future usage projections. Commit this "usage analysis" into the input folder of the project's DIA repository.
