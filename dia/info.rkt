@@ -3,6 +3,7 @@
 (define version "0.0")
 (define collection "abe")
 (define deps '("base"
+               "csv-writing"
                "qi-lib"
                "relation-lib"))
 (define build-deps '())

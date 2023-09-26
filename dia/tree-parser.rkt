@@ -2,6 +2,7 @@
 
 (provide read-attribution-tree
          read-attribution-tree2
+         read-anonymous-attribution-tree2
          read-idea-attribution-tree
          read-idea-antecedents-tree)
 
@@ -31,6 +32,12 @@ corresponding kind of tree.
       (filter non-empty-string? _)
       (make-indent-based-tree (flow (regexp-replace* #px"[[:blank:]]" _ " ")))
       (tree-map label->attribution leaf->attribution2)))
+
+(define-flow (read-anonymous-attribution-tree2 ip)
+  (~> port->lines
+      (filter non-empty-string? _)
+      (make-indent-based-tree (flow (regexp-replace* #px"[[:blank:]]" _ " ")))
+      (tree-map label->attribution leaf->anonymous-attribution2)))
 
 (define-flow (read-idea-attribution-tree ip)
   (~> port->lines
@@ -135,6 +142,12 @@ on format.
                (string-split ", ")
                (if (~> cdr null?) car _))
            attribution)]))
+
+(define (leaf->anonymous-attribution2 x)
+  (match x
+    [(regexp #px"^\\s*\\* (.*)\\[([[:digit:].]+)%\\]"
+             (list _ line (app string->number attribution)))
+     (cons line attribution)]))
 
 (define (label->attribution x)
   (match x
