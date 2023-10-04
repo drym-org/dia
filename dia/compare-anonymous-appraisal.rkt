@@ -18,7 +18,7 @@
        (match trees
          [(list '() ...) result]
          [(list (cons (? string? x) rest) ...)
-          #:when (apply equal? x)
+          #:when (apply string=? x)
           (loop (cons (list (car x)) result)
                 rest)]
          [(list (cons (? number? n) rest) ...)
