@@ -125,3 +125,20 @@ Discuss to assign weights to each appraisal tree. Consider using the 1-N-N² rul
 
 @item{Sum up the proportions by leaf nodes across all appraisal trees, weighted by the scaling factor for each tree (i.e. in the manner decided upon in "reconcile the appraisals"), to arrive at the final attributive proportions that total to 100%.}
 ]
+
+@subsection{Review and Ratify}
+
+Review all of the work done as part of DIA, for instance:
+
+@itemlist[
+#:style 'ordered
+
+@item{The inputs provided by the project.}
+@item{The analyses, appraisals and antecedents that were agreed upon by DIA participants.}
+@item{The agreed-upon pricing and valuation.}
+@item{The final attribution results.}
+@item{The reflection that was done on the DIA process itself.}
+
+]
+
+If those look reasonable and there are no apparent errors, then convey to your fellow reviewers that it looks good to you. Once all the reviewers have signed off, any participant may officially ratify the results so that they go into immediate effect.
